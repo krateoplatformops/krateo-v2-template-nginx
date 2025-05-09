@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "required": [
+    "service"
+  ],
+  "properties": {
+    "service": {
+      "type": "object",
+      "description": "This is for setting up a service more information can be found here: https://kubernetes.io/docs/concepts/services-networking/service/",
+      "required": [],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "NodePort",
+            "LoadBalancer"
+          ],
+          "title": "NGINX service type",
+          "description": "NGINX service type",
+          "default": "NodePort"
+        },
+        "port": {
+          "type": "integer",
+          "minimum": 30000,
+          "maximum": 32767,
+          "title": "NGINX service port",
+          "description": "NGINX service port",
+          "default": "31180"
+        }
+      }
+    }
+  }
+}

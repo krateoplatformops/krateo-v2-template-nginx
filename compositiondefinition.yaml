@@ -1,0 +1,10 @@
+apiVersion: core.krateo.io/v1alpha1
+kind: CompositionDefinition
+metadata:
+  name: nginx
+  namespace: nginx-system
+spec:
+  chart:
+    repo: nginx
+    url: https://charts.krateo.io
+    version: 0.1.0
